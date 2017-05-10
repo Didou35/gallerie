@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+	<title>{{ page.title }}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<!-- Mobile Specific Metas–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- FONT–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+	<!-- CSS–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+
+	<!-- STYLE PERSO -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+
+</head>
+
+<body>
+<div class="menu">
+	<div class="row">
+		<div class="one-half column">
+			<img class="logo" src="logo.png" alt="Didier CANCE" />
+		</div>
+		<div class="one-half column">
+		<?php
+		    echo $menu;
+		?>
+		</div>
+	</div>
+</div>
+	{{ content }}
