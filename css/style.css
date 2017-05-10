@@ -1,0 +1,148 @@
+body {
+	/*background-color: black;*/
+	background-color: #2f3138;
+	color: white;
+}
+.logo{
+	width: 100%;
+}
+.container{
+	padding-top: 2em;
+}
+.photo{
+	width: 100%;
+}
+.plan{
+	width: 100%;
+	height:450px;
+	frameborder:0;
+	border:0;
+}
+.galerie{
+	/*height: 300px;*/
+	/*width: 100%;*/
+	max-height: 25em;
+	max-width: 100%;
+}
+.galerieImage{
+	text-align: center;
+}
+a{
+	color: white;
+	/*border: 1px solid white;
+	padding-top: 10%;
+	padding-bottom: 10%;
+	padding-left: 30%;
+	padding-right: 30%;*/
+	text-decoration:none;
+}
+a:hover{
+	color: #CFD8DC;
+}
+.menu{
+	height: 60%;
+	line-height: 60%
+	box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7);
+	background-color: #754c51;
+}
+.image-upload > input
+{
+    display: none;
+}
+
+.image-upload img
+{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 625px){
+	/* propri�t�s pour mobile */
+	.one-half.column {
+		width: 100%;
+	}
+}
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+	.logo{
+		width: 55%;
+		height: 9rem;
+		padding-left: 37%;
+	}
+	.menu{
+		height: 9rem;
+		box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7);
+	}
+	.galerie{
+		/*height: 300px;*/
+		/*width: 100%;*/
+		max-height: 25em;
+		max-width: 100%;
+		/*background-color:#455A64;*/
+		box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+		filter: brightness(95%);
+	    -webkit-filter: brightness(95%);
+	    -moz-filter: brightness(95%);
+	    -o-filter: brightness(95%);
+	    -ms-filter: brightness(95%);
+	}
+	.galerie:hover{
+		box-shadow: 0 27px 24px 0 rgba(0,0,0,0.2),0 40px 77px 0 rgba(0,0,0,0.22);
+		filter: brightness(100%);
+	    -webkit-filter: brightness(100%);
+	    -moz-filter: brightness(100%);
+	    -o-filter: brightness(100%);
+	    -ms-filter: brightness(100%);
+	}
+	li.bouton_gauche {
+		float : left;
+	}
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
+
+ul.egmenu { 
+    height: 30px;
+    width: 100%;
+}
+
+ul.egmenu > li {
+    float: left;
+    position: relative; 
+	padding-top: 2em;
+	padding-right: 5em; /* droite */
+	padding-bottom: 0;
+	padding-left: 0;
+}
+
+ul.egmenu a {
+    cursor: pointer;
+    display: block;
+    color: white;
+    line-height: 30px;
+    padding: 0 10px;
+}
+
+ul.egmenu li { list-style: none; }
+
+ul.egmenu a:hover { color: #CFD8DC;  }
+ul.egmenu li:hover ul { display: block;  }
+
+@media all and (max-width: 480px) {
+    ul.egmenu {  height: auto; }
+	
+    ul.egmenu > li {  float: none; width: 100%; text-align: center; padding-right: 0; padding-top: 0;}
+    ul.egmenu > li h5 { width: 100%;}
+    ul.egmenu a { line-height: 40px; }
+	.lien{margin: auto;}
+}
