@@ -33,19 +33,7 @@
 
 	<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
 	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
-	<!--
-	.attr('rel', 'gallery') et padding : 0 servent à enlever le contour blanc
-
-	helpers : {
-					overlay : {
-						css : {
-							'background' : 'rgba(0, 0, 0, 0.95)'
-						}
-					}
-	}
-	permet de modifier la couleur du fond
-
-	-->
+	
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$(".fancybox").fancybox({
@@ -74,9 +62,11 @@
 			<img class="logo" src="logo.png" alt="Didier CANCE" />
 		</div>
 		<div class="one-half column">
-		<?php
-		    echo $menu;
-		?>
+			<ul class="egmenu">
+				<li><h5><a class="lien" href="index.html">Accueil</a></h5></li>
+				<li><h5><a class="lien" href="galerie.html">Galerie</a></h5></li>
+				<li><h5><a class="lien" href="contact.html">Contact</a></h5></li>
+			</ul>
 		</div>
 	</div>
 </div>
