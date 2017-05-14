@@ -17,6 +17,12 @@ title: Didier Cance
 				En 1988 il arrive en Bretagne, se met immédiatement à peindre des tableaux représentant la région qui lui est une source d'inspiration picturale importante.
 			</p>
 			<p>
+				{% assign image_files = site.static_files | where: "image", true %}
+				{% for myimage in image_files %}
+				  {{ myimage.path }}
+				{% endfor %}
+			</p>
+			<p>
 				En 1992 il crée sa propre galerie de peinture à Josselin dans le Morbihan suivi en 1993 d'une autre à Douarnenez dans le Finistère.
 			à ce jour Didier a peint environ 400 tableaux répandus à travers l'Europe.
 			Sa vie d'artiste est centrée sur une véritable recherche picturale.
