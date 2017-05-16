@@ -6,7 +6,7 @@ title: Didier Cance
 <div class="container">
 	<div class="row"style="margin-top: 5%">
 	{% assign image_files = site.static_files | where: "image", true %}
-	{% assign  nb_fichier = 0 %}
+	{% assign nb_fichier = 0 %}
 	{% for myimage in image_files %}
 		{% if nb_fichier == 0 %}
 		<div class="four columns galerieImage">
