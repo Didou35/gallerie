@@ -6,11 +6,12 @@ title: Didier Cance
 <div class="container">
 	<div class="row"style="margin-top: 5%">
 	{% assign image_files = site.static_files | where: "image", true %}
-	{% assign nb_fichier = 0 %}
+	{% increment nb_fichier %}
 	{% for myimage in image_files %}
 		{% if nb_fichier == 0 %}
 		<div class="four columns galerieImage">
 		{% endif %}
+		{% increment nb_fichier %}
 		{% nb_fichier = nb_fichier + 1 %}
 			<div class="cache">
 				<a class="fancybox rel="example_group" href="{{ myimage.path }}">
@@ -19,6 +20,9 @@ title: Didier Cance
 			</div>	
 		{% if nb_fichier == 3 %}
 		</div>
+			{% decrement nb_fichier %}
+			{% decrement nb_fichier %}
+			{% decrement nb_fichier %}
 		{% endif %}
 		{{ myimage.path }}
 	{% endfor %}
