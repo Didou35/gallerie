@@ -1,12 +1,12 @@
 ---
 layout: galerie
 title: Didier Cance
+nb_fichier: 0
 ---
 
 <div class="container">
 	<div class="row"style="margin-top: 5%">
 	{% assign image_files = site.static_files | where: "image", true %}
-	{% increment nb_fichier %}
 	{% for myimage in image_files %}
 		{% if nb_fichier == 0 %}
 		<div class="four columns galerieImage">
