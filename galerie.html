@@ -9,16 +9,16 @@ title: Didier Cance
 	{% assign image_files = site.static_files | where: "image", true %}
 	{% for myimage in image_files %}
 		{% if nb_fichier == 0 %}
-		<div class="four columns galerieImage">
 		{% endif %}
+		<div class="four columns galerieImage">
 	 	{% assign nb_fichier = nb_fichier | plus: 1 %}
 			<div class="cache">
 				<a class="fancybox" rel="example_group" href="{{ myimage.path }}">
 					<img class="galerie" src="{{ myimage.path }}" alt="" />
 				</a>
 			</div>	
-		{% if nb_fichier == 3 %}
 		</div>
+		{% if nb_fichier == 3 %}
 			{% assign nb_fichier = nb_fichier | minus:3 %}
 		{% endif %}
 	{% endfor %}
