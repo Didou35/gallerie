@@ -1,9 +1,9 @@
 ---
 layout: galerie
 title: Didier Cance
-nb_fichier: 0
 ---
 
+{% assign nb_fichier = 0 %}
 <div class="container">
 	<div class="row"style="margin-top: 5%">
 	{% assign image_files = site.static_files | where: "image", true %}
@@ -11,7 +11,7 @@ nb_fichier: 0
 		{% if nb_fichier == 0 %}
 		<div class="four columns galerieImage">
 		{% endif %}
-		{% increment nb_fichier %}
+	 	{% assign nb_fichier = nb_fichier | plus: 1 %}
 			<div class="cache">
 				<a class="fancybox" rel="example_group" href="{{ myimage.path }}">
 					<img class="galerie" src="{{ myimage.path }}" alt="" />
@@ -19,9 +19,9 @@ nb_fichier: 0
 			</div>	
 		{% if nb_fichier == 3 %}
 		</div>
-			{% decrement nb_fichier %}
-			{% decrement nb_fichier %}
-			{% decrement nb_fichier %}
+			{% assign nb_fichier = nb_fichier | minus: 1 %}
+			{% assign nb_fichier = nb_fichier | minus: 1 %}
+			{% assign nb_fichier = nb_fichier | minus: 1 %}
 		{% endif %}
 	{% endfor %}
 	</div>
