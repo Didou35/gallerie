@@ -5,10 +5,10 @@ title: Didier Cance
 
 {% assign nb_fichier = 0 %}
 <div class="container">
-	<div class="row"style="margin-top: 5%">
 	{% assign image_files = site.static_files | where: "image", true %}
 	{% for myimage in image_files %}
 		{% if nb_fichier == 0 %}
+	<div class="row"style="margin-top: 5%">
 		{% endif %}
 		<div class="four columns galerieImage">
 	 	{% assign nb_fichier = nb_fichier | plus: 1 %}
@@ -19,8 +19,8 @@ title: Didier Cance
 			</div>	
 		</div>
 		{% if nb_fichier == 3 %}
+	</div>
 			{% assign nb_fichier = nb_fichier | minus:3 %}
 		{% endif %}
 	{% endfor %}
-	</div>
 </div>
