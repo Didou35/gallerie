@@ -19,9 +19,7 @@ title: Didier Cance
 			</div>	
 		{% if nb_fichier == 3 %}
 		</div>
-			{% assign nb_fichier = nb_fichier | minus: 1 %}
-			{% assign nb_fichier = nb_fichier | minus: 1 %}
-			{% assign nb_fichier = nb_fichier | minus: 1 %}
+			{% assign nb_fichier = nb_fichier | minus:3 %}
 		{% endif %}
 	{% endfor %}
 	</div>
